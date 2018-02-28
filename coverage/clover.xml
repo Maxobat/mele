@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519796855905" clover="3.2.0">
-  <project timestamp="1519796855905" name="All files">
-    <metrics statements="25" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5" elements="33" coveredelements="29" complexity="0" loc="25" ncloc="25" packages="2" files="2" classes="2">
+<coverage generated="1519800883394" clover="3.2.0">
+  <project timestamp="1519800883394" name="All files">
+    <metrics statements="32" coveredstatements="29" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="6" elements="43" coveredelements="39" complexity="0" loc="32" ncloc="32" packages="2" files="3" classes="3">
       <package name="src">
-        <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <file name="config.js" path="/Users/max/Projects/mele/src/config.js">
           <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
           <line num="1" count="4" type="stmt"/>
           <line num="2" count="4" type="stmt"/>
           <line num="3" count="4" type="stmt"/>
           <line num="5" count="4" type="stmt"/>
-          <line num="7" count="5" type="stmt"/>
+          <line num="7" count="7" type="stmt"/>
           <line num="12" count="4" type="stmt"/>
           <line num="13" count="3" type="stmt"/>
           <line num="14" count="3" type="stmt"/>
@@ -21,12 +21,22 @@
           <line num="23" count="2" type="stmt"/>
           <line num="25" count="1" type="stmt"/>
           <line num="29" count="4" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="36" count="1" type="stmt"/>
+          <line num="30" count="3" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="33" count="5" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+        </file>
+        <file name="context.js" path="/Users/max/Projects/mele/src/context.js">
+          <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.error">
