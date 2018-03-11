@@ -3,7 +3,7 @@ const mele = require('./mele')
 const { observe } = require('./src/observer')
 const { getDefaultConfig } = require('./src/config')
 
-module.exports = async(config = {}) => {
+module.exports = async (config = {}) => {
     if (config.dev) {
         const observer = observe(path.resolve(__dirname, './silent.js'), './')
 

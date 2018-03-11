@@ -1,9 +1,10 @@
-const requireDir = require('require-dir')
+const requireAll = require('require-all')
 
 exports.generateResolversFromDir = path => {
-    const dir = requireDir(path, {
-        mapKey: (value, baseName) => {
-            const name = baseName.replace(/-|_/, '')
+    const dir = requireAll({
+        dirname: path,
+        map: rawName => {
+            const name = rawName.replace(/-|_/, '')
 
             return name.slice(0, 1).toUpperCase() + name.slice(1)
         },
