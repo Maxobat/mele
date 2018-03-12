@@ -25,8 +25,7 @@ npm manifest:
     "dependencies": {
       "chokidar": "^2.0.2",
       "graphql-yoga": "^1.3.2",
-      "require-all": "^2.2.0",
-      "require-dir": "^1.0.0"
+      "require-all": "^2.2.0"
     },
     "scripts": {
       "test": "jest"
@@ -3559,10 +3558,6 @@ Lockfile:
   require-all@^2.2.0:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/require-all/-/require-all-2.2.0.tgz#b4420c233ac0282d0ff49b277fb880a8b5de0894"
-  
-  require-dir@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/require-dir/-/require-dir-1.0.0.tgz#c2639de72960ea1ee280279f2da35e03c6536b2d"
   
   require-directory@^2.1.1:
     version "2.1.1"

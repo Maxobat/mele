@@ -4,13 +4,13 @@ const { listFiles, readFile } = require('./support/file')
 const getTypesFromDir = async dirPath => {
     const files = await listFiles(dirPath)
 
-    return Promise.all(
-        files.map(file => readFile(path.resolve(dirPath, file)))
-    )
+    return Promise.all(files.map(file => readFile(path.resolve(dirPath, file))))
 }
 
-exports.generateDefinitionFromDir = async path => {
-    const types = await getTypesFromDir(path)
+exports.getTypesFromDir = getTypesFromDir
 
-    return types.reduce((sum, next) => sum + next)
+exports.generateDefinitionFromDir = async dirPath => {
+    const types = await getTypesFromDir(dirPath)
+
+    return types.reduce((sum, next) => sum + next, '')
 }

@@ -14,11 +14,20 @@ describe('generateResolversFromDir', () => {
         expect(ret).toHaveProperty('Episode')
     })
 
-    test('throws if given directory has a non JS file in it', () => {
+    test('returns object with given directory resolver files as keys even when non JS file exists in directory', () => {
         const path = require('path')
         const { generateResolversFromDir } = require('../src/resolvers')
-        const ret = () => generateResolversFromDir(path.resolve('test/mockApp/multi-file-type-resolvers'))
+        const ret = generateResolversFromDir(path.resolve('test/mockApp/multi-file-type-resolvers'))
 
-        expect(ret).toThrow()
+        expect(ret).toHaveProperty('Query')
+    })
+
+    test('throws when given directory does not exist', () => {
+        const path = require('path')
+        const { generateResolversFromDir } = require('../src/resolvers')
+        const MissingDirectoryError = require('../src/error/MissingDirectoryError')
+        const ret = () => generateResolversFromDir(path.resolve('test/mockApp/does-not-exist'))
+
+        expect(ret).toThrow(MissingDirectoryError)
     })
 })

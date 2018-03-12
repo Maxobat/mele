@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/context.js</title>
+    <title>Code coverage report for src/resolvers.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">src</a> context.js
+      <a href="../index.html">All files</a> / <a href="index.html">src</a> resolvers.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>9/9</span>
       </div>
     </div>
   </div>
@@ -55,29 +55,50 @@
 10
 11
 12
-13</td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+13
+14
+15
+16
+17
+18
+19
+20</td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const path = require('path')
-const fs = require('fs')
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const requireAll = require('require-all')
+const MissingDirectoryError = require('./error/MissingDirectoryError')
 &nbsp;
-exports.getContext = pathToFile =&gt; {
-    const fullPath = path.resolve(pathToFile.replace(/\.js|\.\//, '') + '.js')
+exports.generateResolversFromDir = path =&gt; {
+    try {
+        const dir = requireAll({
+            dirname: path,
+            map: rawName =&gt; {
+                const name = rawName.replace(/-|_/, '')
 &nbsp;
-    if (fs.existsSync(fullPath)) {
-        return require(fullPath)
+                return name.slice(0, 1).toUpperCase() + name.slice(1)
+            },
+        })
+&nbsp;
+        return dir
+    } catch (e) {
+        throw new MissingDirectoryError('Must have resolvers directory.')
     }
-&nbsp;
-    return {}
 }
 &nbsp;</pre></td></tr>
 </table></pre>

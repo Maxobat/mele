@@ -6,7 +6,7 @@ exports.listFiles = path => new Promise((resolve, reject) => {
             return reject(err)
         }
 
-        resolve(files)
+        return resolve(files)
     })
 })
 
@@ -16,6 +16,6 @@ exports.readFile = path => new Promise((resolve, reject) => {
             return reject(err)
         }
 
-        resolve(data)
+        return resolve(data)
     })
 })

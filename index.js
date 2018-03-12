@@ -9,7 +9,7 @@ module.exports = async (config = {}) => {
 
         return new Promise(resolve => {
             observer.on('restart', () => {
-                console.log('restart')
+                console.log('restarted')
             })
 
             observer.on('ready', () => {

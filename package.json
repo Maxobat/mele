@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "author": "Max Pennington <max@maxpenn.com>",
   "bin": {
     "mele": "./bin/begin.js"
   },
@@ -22,6 +23,13 @@
   "babel": {
     "presets": [
       "es2015"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+        "**/*.js",
+        "!**/node_modules/**",
+        "!**/test/**"
     ]
   }
 }
