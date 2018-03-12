@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "author": "Max Pennington <max@maxpenn.com>",
+  "repository": "https://github.com/Maxobat/mele",
+  "keywords": ["graphql", "server"],
   "bin": {
     "mele": "./bin/begin.js"
   },
