@@ -1,9 +1,9 @@
 
 ## mele
 
-**Under Active Development**
-
 Simple, zero configuration GraphQL server. mele gets out of the way so there is no bootstrapping, or initialization needed.
+
+**Under Active Development**
 
 ### Getting Started
 Getting started with mele is incredibly simple.
