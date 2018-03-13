@@ -22,7 +22,7 @@ In the resolvers directory, create file called ```Query.js``` with the following
 
 ```
 module.exports {
-    greeting: 'Hello!',
+    greeting: () => 'Hello!',
 }
 ```
 
