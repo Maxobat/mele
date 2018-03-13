@@ -8,9 +8,9 @@ Getting started with mele is incredibly simple.
 
 Install mele with ```yarn add mele```
 
-Create two directories, one named ```queries```, and another named ```resolvers```.
+Create two directories, one named ```types```, and another named ```resolvers```.
 
-In the queries directory, create a file called ```Query.graphql``` and save it with the following contents.
+In the types directory, create a file called ```Query.graphql``` and save it with the following contents.
 
 ```
 type Query {
