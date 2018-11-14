@@ -23,7 +23,7 @@ type Query {
 In the resolvers directory, create file called ```Query.js``` with the following contents:
 
 ```
-module.exports {
+module.exports = {
     greeting: () => 'Hello!',
 }
 ```
